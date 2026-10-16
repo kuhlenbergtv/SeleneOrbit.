@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.22)
-
 project(SeleneOrbit VERSION 1.0.0)
 
 add_subdirectory(JUCE)
@@ -22,10 +21,13 @@ target_sources(SeleneOrbit PRIVATE
 
 target_compile_definitions(SeleneOrbit
     PUBLIC
+    JUCE_VST3_CAN_REPLACE_VST2=0
     JUCE_WEB_BROWSER=0
     JUCE_USE_CURL=0
 
-  target_link_libraries(SeleneOrbit
+  )
+
+target_link_libraries(SeleneOrbit
     PRIVATE
         juce::juce_audio_processors
         juce::juce_audio_utils
