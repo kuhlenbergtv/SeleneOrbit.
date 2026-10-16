@@ -1,0 +1,13 @@
+
+# Generated build files
+/build/
+/build-errors.txt
+
+# Local backups
+*.backup
+
+# JUCE dependency
+/JUCE/
+
+# Project archives
+*.zip
